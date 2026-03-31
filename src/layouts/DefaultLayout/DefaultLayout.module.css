@@ -8,9 +8,9 @@
   height: 100vh;
 }
 .header {
-  background-color: #143057;
+  background: linear-gradient(to left, #C73866, #FE676E);
   width: 100%;
-  height: 100px;
+  height: 250px;
 }
 .main {
   width: 1500px;
