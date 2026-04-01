@@ -177,7 +177,7 @@ table {
   --n-500: hsl(215, 16%, 47%);
   --n-600: hsl(215, 16%, 35%);
   --foreground-color: hsl(0, 0%, 100%); */
-
+  --primary: #c73866;
   --p-background: #f8f8f8;
   /* màu nền background */
   --p-white: #ffffff;
