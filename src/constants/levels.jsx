@@ -1,0 +1,5 @@
+export const LEVELS = {
+  BASIC: "BASIC",
+  INTERMEDIATE: "INTERMEDIATE",
+  ADVANCED: "ADVANCED",
+};

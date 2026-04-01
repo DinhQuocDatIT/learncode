@@ -1,12 +1,19 @@
-import skills from "../../../../datas/skills";
+import skills from "../../../../constants/skill";
+import { useSkill } from "../../../../hooks/SkillContext";
 import styles from "./Sidebar.module.css";
 function Sidebar() {
+  const { skill, setSkill } = useSkill();
   return (
     <div className={styles.wrapper}>
-      {skills.map((skill) => (
-        <button key={skill.id}>
-          <img src={skill.logo} alt="logo" />
-          <div className={styles.name}>{skill.name}</div>
+      {skills.map((typeSkill) => (
+        <button
+          key={typeSkill.id}
+          onClick={() => setSkill(typeSkill)}
+          className={`${typeSkill.id === skill.id ? styles.active : ""}`}
+        >
+          {typeSkill.logo && <img src={typeSkill.logo} alt="logo" />}
+
+          <div className={styles.name}>{typeSkill.name}</div>
         </button>
       ))}
     </div>

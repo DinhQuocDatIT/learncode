@@ -1,3 +1,4 @@
+import { SkillProvider } from "../../hooks/SkillContext";
 import styles from "./DefaultLayout.module.css";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -9,7 +10,9 @@ function DefaultLayout() {
         <Header />
       </header>
       <main className={styles.main}>
-        <Main />
+        <SkillProvider>
+          <Main />
+        </SkillProvider>
       </main>
       <footer className={styles.footer}>
         <Footer />
