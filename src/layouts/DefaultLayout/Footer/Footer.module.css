@@ -1,0 +1,63 @@
+.wrapper {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1500px;
+}
+.wrapper .title {
+  color: #353535;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.contact {
+  display: flex;
+ 
+  width: 100%;
+  align-items: center;
+}
+.contact .contact1 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  gap: 3px;
+}
+.contact .contact1 span {
+  display: flex;
+  align-items: center;
+  color: #666666;
+}
+.contact .contact1 a {
+  display: flex;
+  align-items: center;
+  color: #666666;
+}
+.contact .contact2 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.contact .contact2 a svg {
+  font-size: 30px;
+}
+.instagram {
+  color: #f56a2e;
+}
+
+.facebook {
+  color: #0866ff;
+}
+.tiktok {
+  color: #000000;
+}
+@media (max-width: 1024px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
