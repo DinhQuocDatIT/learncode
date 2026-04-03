@@ -7,7 +7,7 @@ import arrQuestionHtmls from "../../../../datas/html";
 import { useSkill } from "../../../../hooks/SkillContext";
 import Question from "../../../../components/Question/Question";
 import { LEVELS } from "../../../../constants/levels";
-function Content() {
+function Content({ isOpenNav, onClick }) {
   const { skill } = useSkill();
   const [search, setSearch] = useState("");
   const [level, setLevel] = useState("ALL");
@@ -33,7 +33,7 @@ function Content() {
   const handleChange = (event) => {
     setSearch(event.target.value);
   };
-  console.log(search);
+
   if (skill == null) {
     return <div>Không có</div>;
   }
@@ -46,9 +46,12 @@ function Content() {
 
     return matchesSearch && matchesLevel;
   });
-  console.log("aaaaaaaaaaaa");
+
   return (
     <div className={styles.wrapper}>
+      <button className={styles.menubtn} onClick={onClick}>
+        {!isOpenNav ? "Mở" : "Đóng"}
+      </button>
       <div className={styles.header}>
         <div className={styles.search}>
           <button>
@@ -67,7 +70,7 @@ function Content() {
             <button
               key={option.type}
               onClick={() => setLevel(option.type)}
-              className={` ${option.type === level ? styles.active : ""}   ` }
+              className={` ${option.type === level ? styles.active : ""}   `}
             >
               {option.title}
             </button>
@@ -83,8 +86,8 @@ function Content() {
         </div>
         <div className={styles.container}>
           {filteredQuestions.length > 0 ? (
-            filteredQuestions.map((question) => (
-              <Question key={question.id} question={question} />
+            filteredQuestions.map((question, index) => (
+              <Question key={index} question={question} />
             ))
           ) : (
             <p className={styles.noResult}>Không tìm thấy câu hỏi phù hợp.</p>

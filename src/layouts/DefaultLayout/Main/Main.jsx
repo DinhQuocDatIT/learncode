@@ -17,11 +17,7 @@ function Main() {
       </nav>
       {isOpenNav && <div className={styles.overlay} onClick={closeMenu}></div>}
       <div className={styles.content}>
-        <button className={styles.menubtn} onClick={toggleMenu} >
-          {!isOpenNav ? "Mở" :"Đóng"}
-        </button>
-        <Content />
-    
+        <Content isOpenNav={isOpenNav} onClick={toggleMenu} />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import styles from "./DefaultLayout.module.css";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
+import { Outlet } from "react-router-dom";
 function DefaultLayout() {
   return (
     <div className={styles.wrapper}>
@@ -11,7 +12,8 @@ function DefaultLayout() {
       </header>
       <main className={styles.main}>
         <SkillProvider>
-          <Main />
+          
+          <Outlet />
         </SkillProvider>
       </main>
       <footer className={styles.footer}>

@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
 import skills from "../../../constants/skill";
 import styles from "./Header.module.css";
 
 function Header() {
+  const handldeNotifi = () => {
+    alert("Xin lỗi nhìu nhé, Admin đang làm nhoa");
+  };
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -9,8 +13,12 @@ function Header() {
         <span className={styles.title2}>Công nghệ thông tin</span>
         <span className={styles.course}>HTML · CSS · JS · TS · React </span>
         <div className={styles.action}>
-          <button>Bài viết</button>
-          <button>Profile</button>
+        
+          <Link to={"/"} onClick={handldeNotifi}>
+            {" "}
+            Bài viết
+          </Link>
+          <Link to={"/profile"}> Profile</Link>
         </div>
       </div>
       <div className={styles.stats}>

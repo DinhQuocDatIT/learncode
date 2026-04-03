@@ -2,6 +2,7 @@ import styles from "./AboutMe.module.css";
 import rocketIcon from "../../../assets/rocket-icon.ico";
 import laptopIcon from "../../../assets/laptop-icon.svg";
 import cvFile from "../../../assets/CV_Resume.pdf";
+import { Link } from "react-router-dom";
 
 function AboutMe() {
   return (
@@ -28,9 +29,8 @@ function AboutMe() {
             >
               Tải CV
             </a>
-            <a href="#ProjectContainer" className={styles.outlineButton}>
-              Xem dự án
-            </a>
+            <Link  className={styles.outlineButton} to={"/"}> Xem dự án</Link>
+           
           </div>
         </div>
       </div>
