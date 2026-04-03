@@ -12,7 +12,7 @@ function HeaderProfile() {
             <div className={styles.badge}>Fullstack developer</div>
           </div>
           <p>
-            Mong muốn ứng tuyển vị trí <span>Junior Developer</span> trong lĩnh
+            Mong muốn ứng tuyển vị trí <span>Intern Developer</span> trong lĩnh
             vực phát triển web và mobile
           </p>
         </div>

@@ -20,7 +20,7 @@ function AboutMe() {
           </p>
 
           <div className={styles.cta}>
-            <a
+            {/* <a
               href={cvFile}
               target="_blank"
               rel="noopener noreferrer"
@@ -28,9 +28,12 @@ function AboutMe() {
               download
             >
               Tải CV
-            </a>
-            <Link  className={styles.outlineButton} to={"/"}> Xem dự án</Link>
-           
+            </a> */}
+            <a className={styles.primaryButton}>Tải CV</a>
+            <Link className={styles.outlineButton} to={"/"}>
+              {" "}
+              Xem dự án
+            </Link>
           </div>
         </div>
       </div>
