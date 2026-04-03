@@ -14,6 +14,7 @@ function Sidebar() {
           {typeSkill.logo && <img src={typeSkill.logo} alt="logo" />}
 
           <div className={styles.name}>{typeSkill.name}</div>
+          <div className={styles.count}>{typeSkill.count}</div>
         </button>
       ))}
     </div>

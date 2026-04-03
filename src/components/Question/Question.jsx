@@ -21,13 +21,19 @@ function Question({ question }) {
           <span className={styles.titleItem}>{question.title}</span>
         </div>
         {question.level === LEVELS.BASIC && (
-          <span className={`${styles.type}  ${styles.basic} `}>{level[question.level]}</span>
+          <span className={`${styles.type}  ${styles.basic} `}>
+            {level[question.level]}
+          </span>
         )}
         {question.level === LEVELS.INTERMEDIATE && (
-          <span className={`${styles.type}  ${styles.intermediate}  `}>{level[question.level]}</span>
+          <span className={`${styles.type}  ${styles.intermediate}  `}>
+            {level[question.level]}
+          </span>
         )}
         {question.level === LEVELS.ADVANCED && (
-          <span className={`${styles.type}   ${styles.advanced} `}>{level[question.level]}</span>
+          <span className={`${styles.type}   ${styles.advanced} `}>
+            {level[question.level]}
+          </span>
         )}
       </div>
 
@@ -42,7 +48,9 @@ function Question({ question }) {
             ))}
           </ul>
           {question.example && (
-            <div className={styles.example}> {question.example}</div>
+            <div className={styles.example}>
+              <ReactMarkdown>{question.example}</ReactMarkdown>{" "}
+            </div>
           )}
         </div>
       </div>

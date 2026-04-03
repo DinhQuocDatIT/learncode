@@ -1,3 +1,4 @@
+import skills from "../../../constants/skill";
 import styles from "./Header.module.css";
 
 function Header() {
@@ -14,11 +15,11 @@ function Header() {
       </div>
       <div className={styles.stats}>
         <div>
-          <span className={styles.quantities}>1000</span>
+          <span className={styles.quantities}>{skills[0].count}</span>
           <span className={styles.name}>Câu hỏi</span>
         </div>
         <div>
-          <span className={styles.quantities}>20</span>
+          <span className={styles.quantities}>{skills.length - 1}</span>
           <span className={styles.name}>Chủ đề</span>
         </div>
         <div className={styles.describe}>

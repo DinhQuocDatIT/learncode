@@ -84,8 +84,10 @@
   font-weight: 500;
 }
 .contentItem ul {
+  list-style-type: disc;
   padding: 10px;
 }
+
 .contentItem ul li {
   color: rgb(82, 82, 82);
   margin: 10px 0;

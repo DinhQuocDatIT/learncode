@@ -1,0 +1,299 @@
+.skillsSection {
+  padding: 80px 0;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-hight);
+  font-weight: 700;
+  color: var(--p-950);
+  margin: 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--n-600);
+  max-width: 75ch;
+  margin: 0;
+}
+
+.skillsGridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, minmax(320px, auto));
+  gap: 12px;
+}
+
+.skillsGridItem {
+  overflow: hidden;
+  border: 2px solid var(--p-100);
+  border-radius: 24px;
+  background-color: var(--p-20);
+  padding: 2rem;
+  box-shadow: 0px 2px 4px hsla(233, 45%, 20%, 0.1);
+}
+
+/* Item 1: Cat 1 */
+.skillsGridItem:nth-child(1) {
+  border: none;
+  background: url("../../../assets/cat1.jpeg") center / cover no-repeat;
+}
+
+/* Item 2: Tech Skills */
+.skillsGridItem:nth-child(2) {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.iconsListWrapper {
+  overflow: hidden;
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.iconsListWrapper:nth-child(1) .iconsList {
+  animation: moveLeft 30s linear infinite;
+}
+
+.iconsListWrapper:nth-child(2) .iconsList {
+  animation: moveRight 60s linear infinite;
+}
+
+.iconsList {
+  display: flex;
+  min-width: 100%;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.iconBadges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.14em;
+  border-radius: 12px;
+  padding: 0.6em 0;
+  width: 12em;
+  font-weight: 700;
+  font-size: var(--caption-font-size);
+  text-transform: uppercase;
+}
+
+.iconBadges img {
+  height: 2em;
+}
+
+.iconBadges:nth-child(even) {
+  background: var(--main-gradient-color);
+  color: white;
+}
+
+.iconBadges:nth-child(odd) {
+  background: white;
+  border: 1px solid var(--p-100);
+}
+
+.iconBadges:nth-child(odd) span {
+  background: var(--main-gradient-color);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Item 3: Soft Skills */
+.skillsGridItem:nth-child(3) {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.softSkillsContainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.softSkillsBadge {
+  height: 36px;
+  width: 244px;
+  border: 1px solid var(--p-100);
+  border-radius: 24px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--caption-font-size);
+  font-weight: 600;
+  text-transform: capitalize;
+  position: absolute;
+}
+
+.softSkillsBadge p {
+  background: var(--main-gradient-color);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin: 0;
+}
+
+.softSkillsBadge:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  transform: rotate(-2deg);
+}
+.softSkillsBadge:nth-child(2) {
+  bottom: 10%;
+  left: 20%;
+  transform: rotate(2deg);
+}
+.softSkillsBadge:nth-child(3) {
+  top: 25%;
+  right: 20%;
+  transform: rotate(-2deg);
+}
+.softSkillsBadge:nth-child(4) {
+  bottom: 10%;
+  right: 5%;
+  transform: rotate(2deg);
+}
+
+.softSkillsBookIcons img {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+}
+
+.softSkillsBookIcons img:nth-child(1) {
+  top: 20px;
+  left: 50px;
+  transform: scaleX(-1) translateY(5px);
+}
+.softSkillsBookIcons img:nth-child(2) {
+  top: 40%;
+  left: 45%;
+  transform: rotate(120deg);
+}
+.softSkillsBookIcons img:nth-child(3) {
+  top: 10%;
+  right: 20%;
+}
+.softSkillsBookIcons img:nth-child(4) {
+  bottom: 20%;
+  right: 5%;
+  transform: scaleX(-1) rotate(-4deg);
+}
+
+/* Item 4: Cat 3 Hover */
+.skillsGridItem:nth-child(4) {
+  background: url("../../../assets/cat3.jpeg") center / cover no-repeat;
+  transition: background-image 0.3s ease;
+}
+
+.skillsGridItem:nth-child(4):hover {
+  background-image: url("../../../assets/cat2.jpeg");
+}
+
+.skillsGridItemHeader div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.skillsGridItemHeader h2 {
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.skillsGridItemHeader p {
+  margin-top: 12px;
+  color: var(--n-500);
+  max-width: 60ch;
+}
+
+/* Animations */
+@keyframes moveLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 12px));
+  }
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(calc(-100% - 12px));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+/* Media Queries cho Skills */
+@media (max-width: 1440px) {
+  .softSkillsBadge {
+    position: static !important;
+    transform: none !important;
+    width: auto; /* Để badge tự co giãn theo chữ */
+    min-width: 200px;
+  }
+  .softSkillsContainer {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .softSkillsBookIcons {
+    display: none; /* Ẩn mấy cuốn sách khi màn hình nhỏ */
+  }
+}
+
+@media (max-width: 768px) {
+  .skillsGridContainer {
+    grid-template-columns: 1fr; /* Chuyển về 1 cột */
+    grid-auto-rows: minmax(280px, auto);
+  }
+  .skillsGridItem {
+    padding: 1rem;
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+}
