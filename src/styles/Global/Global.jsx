@@ -1,4 +1,4 @@
-import "./Global.module.css";
+import "./Global.css";
 import "./font.css";
 function Global({ children }) {
   return <>{children}</>;
